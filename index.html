@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STR Podcast Intelligence — Marketing Management Summary</title>
+<style>
+  :root{
+    --ink:#0f1722; --ink2:#3b4654; --muted:#6b7686; --line:#e3e7ec; --bg:#f6f7f9;
+    --card:#ffffff; --accent:#3a4ee8; --accent-soft:#eef0fe;
+    --teal:#0f6e56; --teal-soft:#e1f5ee; --amber:#854f0b; --amber-soft:#faeeda;
+    --red:#a32d2d; --red-soft:#fbecec; --green:#3b6d11; --green-soft:#eaf3de;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px 80px}
+  header.top{padding:46px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+  .kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:31px;line-height:1.18;margin:12px 0 10px;font-weight:700;letter-spacing:-.01em}
+  .sub{color:var(--ink2);font-size:17px;max-width:780px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:13px;color:var(--muted)}
+  .meta b{color:var(--ink2);font-weight:600}
+  .v2{display:inline-block;margin-top:16px;background:var(--teal-soft);color:var(--teal);font-size:13px;
+    padding:7px 14px;border-radius:8px;font-weight:600}
+  h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+    font-weight:700;margin:46px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  h3{font-size:19px;margin:0 0 6px;font-weight:650;letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:16px 0}
+  .tldr{background:#0f1722;color:#eef1f6;border:none;border-radius:16px;padding:26px 28px}
+  .tldr h3{color:#fff}
+  .tldr ol{margin:6px 0 0;padding-left:20px}
+  .tldr li{margin:11px 0;color:#d6dce6}
+  .tldr li b{color:#fff;font-weight:650}
+  .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:3px 9px;border-radius:20px;margin:0 6px 6px 0;background:var(--accent-soft);color:var(--accent)}
+  .themes{counter-reset:th}
+  .theme{counter-increment:th}
+  .theme h3::before{content:counter(th);display:inline-flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;font-size:14px;font-weight:700;
+    margin-right:11px;vertical-align:2px}
+  .q{border-left:3px solid var(--accent);background:var(--accent-soft);padding:10px 15px;border-radius:0 8px 8px 0;
+    margin:12px 0;font-size:14.5px;color:var(--ink2)}
+  .q cite{display:block;margin-top:4px;font-style:normal;font-size:12.5px;color:var(--muted);font-weight:600}
+  .new{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--teal);background:var(--teal-soft);padding:2px 7px;border-radius:5px;margin-left:6px;vertical-align:2px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .stat .n{font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .stat .l{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  td b{font-weight:650}
+  .pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;white-space:nowrap}
+  .p-threat{background:var(--red-soft);color:var(--red)}
+  .p-watch{background:var(--amber-soft);color:var(--amber)}
+  .p-opp{background:var(--teal-soft);color:var(--teal)}
+  .actions h4{margin:0 0 3px;font-size:16px;font-weight:650}
+  .actions .who{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  .actions ul{margin:8px 0 0;padding-left:18px}
+  .actions li{margin:7px 0;font-size:14.5px;color:var(--ink2)}
+  .rank{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--teal-soft);color:var(--teal);
+    font-size:12px;font-weight:700;text-align:center;line-height:22px;margin-right:8px}
+  .callout{background:var(--amber-soft);border:1px solid #f0d9a8;border-radius:12px;padding:16px 20px;font-size:14.5px;color:#5c3a08}
+  .callout b{color:#3f2705}
+  footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  footer code{background:#eceff3;padding:1px 5px;border-radius:4px;font-size:12px}
+  a{color:var(--accent);text-decoration:none}
+  @media(max-width:680px){.grid2,.grid3{grid-template-columns:1fr}h1{font-size:25px}.wrap{padding:0 16px 60px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="kicker">Market Intelligence · STR &amp; Hospitality Podcasts</div>
+  <h1>What the STR Industry Is Talking About — and What Marketing Should Do About It</h1>
+  <p class="sub">A cross-channel analysis of the two most recent episodes from 18 short-term-rental &amp; hospitality podcasts, synthesized into recurring themes, market shifts, opportunities, risks, and recommended actions for Guesty's Marketing, PMM, SEO, Brand, and Market-Intelligence teams.</p>
+  <div class="meta">
+    <span><b>Date:</b> 21 June 2026</span>
+    <span><b>Coverage:</b> 18 channels · 36 episodes · ~270,000 words</span>
+    <span><b>Source:</b> Full audio transcripts (locally transcribed)</span>
+  </div>
+</header>
+
+<div class="card tldr">
+  <h3>The bottom line — seven things that matter this cycle</h3>
+  <ol>
+    <li><b>AI search is quietly rewiring discovery.</b> Operators report real bookings that begin "I found you on ChatGPT," a funded LLM booking agent (Odessia, $6M Sequoia) is live, and Lodgify is wiring ChatGPT booking into its PMS. SEO is becoming GEO — and the new endgame is being the brand the guest <em>names</em> in the prompt.</li>
+    <li><b>AI is moving from automation to autonomy — and a new layer is trying to sit on top of the PMS.</b> ProHost AI ("170 properties, 2 people") argues PMS-native AI will lose to specialists. But real-world tests also show AI guest-comms still lagging human teams — the autonomy story is real but not yet won.</li>
+    <li><b>Direct booking is survival — but the smarter frame is margin, not share.</b> A decade of "book direct" did <em>not</em> shrink OTA share (20%→21% for US hotel chains); the win was margin, repeat bookings, and loyalty. "Use OTAs to acquire, own the rebook directly."</li>
+    <li><b>Ancillary revenue is the new growth lever.</b> The industry is reframing itself as "demand-constrained, not supply-constrained" — upsells, private-chef commissions, and pet fees are "money left on the table" ($2–5K/month for some hosts).</li>
+    <li><b>Revenue management and marketing are merging,</b> and "set-and-forget pricing" is the named villain. Vrbo's new Sponsored Listings opens a paid-discovery battleground; the profit/margin conversation is firmly back.</li>
+    <li><b>Guesty's share of voice is very low.</b> Across 36 episodes Guesty surfaced only incidentally — PetScreening naming it as one of several PMS integrations. Competitors, by contrast, <em>own</em> the medium (PriceLabs runs RevLabs, AirDNA runs STR Data Lab, Boostly runs its own show) and saturate the sponsor reads. <em>(The "orchestration engine" idea was floated by Guestway — a competitor — not Guesty.)</em></li>
+    <li><b>Demand is cautiously recovering, bifurcated, and event-volatile.</b> May marked the first occupancy gain in ~a year; luxury is pulling away from budget; the World Cup "surge that didn't show up" is the cautionary tale of the quarter.</li>
+  </ol>
+</div>
+
+<h2>The recurring themes — a higher-level read</h2>
+<div class="themes">
+
+<div class="card theme">
+  <h3>AI search is breaking the discovery layer</h3>
+  <span class="tag">SEO / GEO</span><span class="tag">AI</span><span class="tag">Market Intel</span>
+  <p>The most consequential shift for marketing — and the second pass made it more concrete. In side-by-side tests, ChatGPT surfaced only OTAs for generic queries while Claude returned direct sites first; LLM-sourced leads arrive pre-sold ("modern-day influencer marketing"). New evidence this round: a funded conversational booking agent, and Skift's reframing of what "AI visibility" even means.</p>
+  <div class="q">"The ultimate form of AI visibility is the guest saying 'book me a hotel… but it has to be Hilton.' Once the customer names the brand, you're golden."<cite>Hotels Tried to Cut Out Expedia — Skift</cite></div>
+  <p><b>New this round:</b> <span class="new">Odessia</span> — ex-Sonder co-founder Francis Davidson's LLM trip-planner (one-click books hotel+flights+experiences), $6M from Sequoia, called "the best AI travel experience by a long shot" (Behind the Stays). <span class="new">Vrbo Sponsored Listings</span> — a paid-visibility layer on the pro channel ("I'd rather pay Vrbo than Google," GMH). And platforms now use <b>AI to police listing photo quality and claim accuracy</b> — "there's no hiding anymore" (STR Sisterhood). The defensible ground remains niche/avatar depth + TikTok/creator citations, but the strategic endgame is brand recall inside the prompt.</p>
+</div>
+
+<div class="card theme">
+  <h3>AI shifts from automation to autonomy — and targets the PMS</h3>
+  <span class="tag">Competitor</span><span class="tag">AI</span><span class="tag">PMM</span>
+  <p>ProHost AI's "AI employees" pitch (sitting <em>on top of</em> the PMS, arguing PMS-native AI loses to specialists) remains the sharpest competitive threat. The second pass adds important nuance on both sides.</p>
+  <div class="q">"For a lot of us that are one-person businesses, AI can pick up the slack and be your analytics team."<cite>Why the STR Market Isn't Scary — STR Sisterhood (Sandy Lee, connecting Claude directly to her PMS)</cite></div>
+  <p><b>New this round:</b> operators are already <b>wiring third-party LLMs into their PMS data</b> for pacing dashboards — a native-feature gap Guesty could own. But the autonomy hype meets reality: a host testing an AI guest-comms tool found her <b>human concierge team replies faster than the AI</b> (STR Sisterhood), and an AI voice agent "couldn't get there" on a specific request (GMH). On Boostly's predictions, an executive from <b>Guestway</b> (a guest-experience layer that sits on top of PMSs like Guesty/Mews/Hostaway — <em>not</em> Guesty) reframed the opportunity as an <b>"orchestration engine"</b> coordinating real-world work end-to-end — a category Guesty can credibly contest given its all-in-one footprint.</p>
+</div>
+
+<div class="card theme">
+  <h3>"Augmentation, not replacement" — and "purpose before polish"</h3>
+  <span class="tag">Brand</span><span class="tag">PMM</span><span class="tag">AI</span>
+  <p>Reinforced from every direction this round. The VRMA conference's most-repeated line was "you can't out-tech the competition — tech points free us for touch points." A competitor CTO (Duetto) called it "outcome coding, not vibe coding… AI makes subject-matter expertise <em>more</em> valuable." And there's now a consumer-side backlash too: in-person events are booming, "the human aspect has never been more important" (Behind the Stays).</p>
+  <div class="q">"Before you touch a single AI tool, there's foundational work to do… that's the single biggest reason AI ends up feeling generic." <br>An agent is "an employee you instruct once that then runs autonomously."<cite>VRS — Heather Bayer &amp; Siddhi Mittal (Yhangry / SheCompoundsAI)</cite></div>
+  <p>Implication unchanged and strengthened: sell the <b>foundation</b> (documented avatars, brand voice — the context that makes AI useful), lead with quantified outcomes, and keep humans in the loop where it counts (a pet-compliance expert noted you legally <em>cannot</em> let AI adjudicate ESA claims).</p>
+</div>
+
+<div class="card theme">
+  <h3>Direct booking = survival — but reframe it as margin, not share</h3>
+  <span class="tag">Marketing / Growth</span><span class="tag">Brand</span><span class="tag">Competitor</span>
+  <p>The single biggest <em>refinement</em> from the second pass. Skift's decade-in-review showed the "kill the OTA" war was lost on share but won on economics — and that's the pitch Guesty should adopt.</p>
+  <div class="q">"Out of every US chain hotel room booked, the OTA slice didn't shrink — it grew, 20% to 21%. The real win was margin: repeat bookings, loyalty, co-branded cards."<cite>Hotels Tried to Cut Out Expedia — Skift</cite></div>
+  <p><b>New this round:</b> a clean competitive wedge — Airbnb's co-host marketplace <b>explicitly excludes professional managers</b> ("large PMs don't clear the bar," citing a 4.62 rating), and panelists urged pros to stop calling themselves "hosts" (Sarah &amp; T / VRMA). Meanwhile a PMS competitor is bundling the guest-relationship layer: <span class="new">Journey × Cloudbeds</span> now pushes a third-party loyalty/rewards network to Cloudbeds' top 100. And the "OTA &amp; brand fees are hidden marketing spend" argument (Behind the Stays) quantifies the true cost of OTA dependence. Guesty's "own the rebook" story (website + CRM + payments + loyalty) has never been more on-point.</p>
+</div>
+
+<div class="card theme">
+  <h3>Ancillary revenue is the new growth lever <span class="new">new theme</span></h3>
+  <span class="tag">Revenue Mgmt</span><span class="tag">Marketing / Growth</span><span class="tag">Go-to-Market</span>
+  <p>A distinct, recurring thread that surfaced strongly across the second episodes. The framing shift is explicit: the market is now <b>demand-constrained, not supply-constrained</b> — so the unlock is more revenue per stay, not more units.</p>
+  <div class="q">"This industry is now demand-constrained, not supply-constrained. You should be upselling — that's money left on the table."<cite>VRS667 — Siddhi Mittal (Yhangry)</cite></div>
+  <p>Concrete proof points: a UK manager earns <b>~£3K/month</b> in private-chef commission across 300 properties just by surfacing the option (Yhangry); hosts add <b>$2–5K/month</b> from early check-in, pool heat, and grocery upsells (Thanks for Visiting); and pet fees are widely under-collected — <b>60% of claimed emotional-support-animal exemptions don't meet the standard</b>, so hosts waive fees on what are really pets (PetScreening, which integrates with Guesty). This maps directly to Guesty's upsell/marketplace surfaces.</p>
+</div>
+
+<div class="card theme">
+  <h3>Revenue management and marketing are merging — profit is back</h3>
+  <span class="tag">Revenue Mgmt</span><span class="tag">PMM</span>
+  <p>"Set-and-forget" pricing remains the universally named villain — and Airbnb Smart Pricing is cast as a conflict of interest ("you're asking the platform that benefits from lower rates to set your rates," Thanks for Visiting). The merge of RevManagement and marketing is now explicit in job titles (Landing's "SVP of Revenue &amp; Marketing") and in competitor positioning.</p>
+  <div class="q">"Revenue management and marketing finally merge — automated campaigns that adjust to inventory the same way a revenue manager adjusts pricing. We're seeing 8–18x return on ad spend."<cite>Boostly 2026 Predictions — BookingsCloud</cite></div>
+  <p><b>New this round:</b> the profit refocus deepened — Duetto acquired a hotel-profit dataset (HotStats) to move "beyond commodity regression pricing," and claims <b>65%+ of a revenue manager's time is just data-wrangling</b> (No Vacancy). Hybrid <b>STR + mid-term-rental</b> strategies (Landing: 750+ properties) and digital nomads (35M→50M+) are emerging as slow-season margin plays.</p>
+</div>
+
+<div class="card theme">
+  <h3>Consolidation is happening at every layer</h3>
+  <span class="tag">Market Intel</span><span class="tag">Go-to-Market</span>
+  <p>The M&amp;A drumbeat continued and broadened. New this round: <b>MGM going private (~$18B, Barry Diller's IAC)</b> on the thesis that public markets undervalue experience-driven hospitality; the revelation that <b>Airbnb and Marriott nearly partnered in 2016</b> (Bonvoy points on Airbnb stays) before owners killed it; and Duetto's HotStats acquisition. The throughline holds — the industry is consolidating around <b>unified, AI-ready platforms</b> — but a counter-current is also visible: AI may <b>unbundle</b> the franchise model into "federated" pieces (buy distribution, or loyalty, or tech separately), an opening for Guesty to be the tech-and-distribution alliance for independents.</p>
+</div>
+
+</div>
+
+<h2>Competitive &amp; share-of-voice intelligence</h2>
+<div class="callout">
+  <b>Read on Guesty's presence (fact-checked):</b> Across all 36 episodes Guesty appears only <b>incidentally</b> — PetScreening naming it as one of several PMS integrations (alongside OwnerRez, Hospitable, Hostfully), plus a passing reference to an old Airbnb "emoji hack." Guesty had <b>no active on-air voice</b>. <em>(An earlier draft credited a Guesty leader with the "orchestration engine" framing in Boostly's predictions; on verification, that speaker was from Guestway — a different company.)</em> Competitors, by contrast, <em>own</em> the medium — PriceLabs runs <em>RevLabs</em>, AirDNA runs <em>STR Data Lab</em>, Boostly runs its own show + a content-trained AI — and saturate the sponsor reads (Lodgify, Cloudbeds, StayFi, Safely, Journey, Bilt). The gap is real and fixable.
+</div>
+<table>
+  <thead><tr><th>Player</th><th>Move / positioning (heard on-air)</th><th>Signal</th></tr></thead>
+  <tbody>
+    <tr><td><b>ProHost AI</b></td><td>"AI employees" on top of the PMS; "170 properties, 2 people"; $15/listing/mo + usage credits; argues PMS-native AI loses to specialists</td><td><span class="pill p-threat">Threat</span></td></tr>
+    <tr><td><b>Lodgify</b></td><td>Rebrand "minimum hassle, maximum independence"; AI co-host; direct ChatGPT booking integration; 0% direct-booking commission</td><td><span class="pill p-threat">Threat</span></td></tr>
+    <tr><td><b>Vrbo / Expedia</b></td><td>New <b>Sponsored Listings</b> (paid visibility for pros); ~$1B ARR on Vrbo brand; "Vacation Rental by Professional"</td><td><span class="pill p-threat">Threat</span></td></tr>
+    <tr><td><b>Odessia</b></td><td>LLM trip-planner that books hotel+flights+experiences in one click; $6M Sequoia (ex-Sonder Francis Davidson); a new AI demand channel above OTAs</td><td><span class="pill p-watch">Watch</span></td></tr>
+    <tr><td><b>Guestway</b></td><td>Guest-experience layer sitting on top of PMSs (Guesty/Mews/Hostaway) — unified inbox, automations; pushing the "orchestration engine" framing</td><td><span class="pill p-watch">Watch</span></td></tr>
+    <tr><td><b>Cloudbeds + Journey</b></td><td>"Signals" foundation AI model + all-in-one; now bundling Journey's loyalty/rewards network to top-100 partners</td><td><span class="pill p-watch">Watch</span></td></tr>
+    <tr><td><b>BookingsCloud</b></td><td>RM+marketing-merge positioning; claims 8–18x ROAS on ad automation; occupying the convergence narrative</td><td><span class="pill p-watch">Watch</span></td></tr>
+    <tr><td><b>PriceLabs / AirDNA / Duetto</b></td><td>Own the podcasts &amp; the data authority; Duetto acquired HotStats (profit data) + "Duetto Labs" AI push</td><td><span class="pill p-watch">Watch</span></td></tr>
+    <tr><td><b>PetScreening / Yhangry / StayFi / Safely</b></td><td>Ancillary-revenue &amp; guest-data layers; PetScreening <em>integrates with Guesty</em> (and competitors) — partner &amp; co-market opportunity</td><td><span class="pill p-opp">Adjacent</span></td></tr>
+  </tbody>
+</table>
+
+<h2>Opportunities for Guesty</h2>
+<div class="card">
+  <p><span class="rank">1</span><b>Own "GEO" and the "named brand" endgame.</b> Nobody has authoritatively claimed "how to get found by AI." Pair a GEO playbook (niche depth, structured data, creator/TikTok citations) with the higher-order goal Skift named — being the brand guests <em>name</em> in the prompt — which loops back to brand + loyalty.</p>
+  <p><span class="rank">2</span><b>Contest the "orchestration engine" category.</b> A competitor-adjacent player (Guestway) is already using this language. Push Guesty's narrative beyond "PMS" to the AI layer that coordinates guest, cleaner, owner, and payments end-to-end — the direct answer to "AI on top of the PMS" plays like ProHost and Guestway.</p>
+  <p><span class="rank">3</span><b>Productize ancillary revenue.</b> "Demand-constrained, not supply-constrained" + "$2–5K/month left on the table" is a concrete, emotional hook. Templated upsells, a partner marketplace (Yhangry, PetScreening — already a Guesty integration), and owner-statement transparency map to existing surfaces.</p>
+  <p><span class="rank">4</span><b>Rally the professional-manager segment.</b> Airbnb's co-host marketplace just told pros they "don't clear the bar." That's a ready-made wedge: Guesty as the platform built <em>for</em> professional management, not casual hosting.</p>
+  <p><span class="rank">5</span><b>Reframe direct booking as margin, not share.</b> Adopt the "OTA to acquire, direct to retain" + "own the rebook" economics story (proof: hotels grew margin without shrinking OTA share). It's more credible than "beat the OTAs."</p>
+  <p><span class="rank">6</span><b>Capture the buyer on-ramp.</b> New investors today run on OTAs + PriceLabs + spreadsheets with <em>no PMS</em>, and onboard via low-cost coaching communities. "Get a PMS is step one" is the message — meet them in those communities with education, and defuse switching/"muscle-memory" anxiety.</p>
+</div>
+
+<h2>Risks &amp; watch-list</h2>
+<table>
+  <thead><tr><th>Risk</th><th>Why it matters</th><th>Severity</th></tr></thead>
+  <tbody>
+    <tr><td><b>AI workspace disintermediation</b></td><td>ProHost-style layers + Lodgify/Cloudbeds AI could own the operator relationship and relegate the PMS to plumbing</td><td><span class="pill p-threat">High</span></td></tr>
+    <tr><td><b>AI-channel booking</b></td><td>Odessia + Lodgify's ChatGPT booking = "discover and book without a platform" — discovery shifting off both OTAs and search</td><td><span class="pill p-threat">High</span></td></tr>
+    <tr><td><b>Paid-discovery arms race</b></td><td>Vrbo Sponsored Listings (and eventual LLM ad placement) favor deep pockets; organic visibility erodes</td><td><span class="pill p-watch">Medium</span></td></tr>
+    <tr><td><b>Share-of-voice deficit</b></td><td>Competitors own the podcasts &amp; sponsor reads; Guesty under-represented where PMS decisions are influenced</td><td><span class="pill p-watch">Medium</span></td></tr>
+    <tr><td><b>Pricing pressure</b></td><td>AI-native entrants ($15/listing + usage) commoditize the SaaS layer and monetize AI usage</td><td><span class="pill p-watch">Medium</span></td></tr>
+    <tr><td><b>Regulation / tourist taxes</b></td><td>Amsterdam (→20% by 2030, lawsuits), Barcelona/Budapest zone bans, UK tourist-tax-as-90-day-rule enforcement, US capital-gains lock-in &amp; local 24/7-rep rules</td><td><span class="pill p-watch">Medium</span></td></tr>
+    <tr><td><b>AI over-claiming</b></td><td>Real tests show AI guest-comms still lag human teams on speed/specifics; over-promising autonomy invites distrust</td><td><span class="pill p-watch">Low–Med</span></td></tr>
+  </tbody>
+</table>
+
+<h2>Recommended actions by team</h2>
+<div class="grid2 actions">
+  <div class="card">
+    <div class="who">SEO → GEO</div>
+    <h4>Lead the generative-engine shift</h4>
+    <ul>
+      <li>Track visibility across ChatGPT, Claude, Perplexity, Gemini — and test whether listings surface in agents like Odessia.</li>
+      <li>Publish the "get found by AI" playbook (niche/avatar depth, structured data, long-tail queries) and tie it to brand recall ("be the named brand").</li>
+      <li>Build a creator/TikTok motion — dual audience + LLM-citation value.</li>
+      <li>Help PMs evaluate Vrbo Sponsored-Listing ROI vs. Google/direct.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="who">Product Marketing</div>
+    <h4>Own the orchestration &amp; engine narrative</h4>
+    <ul>
+      <li>Claim the "orchestration engine" category; counter "AI on top of the PMS" with "AI native to your data + payments + channels."</li>
+      <li>Sell the foundation (avatars, brand voice) — not "AI" generically.</li>
+      <li>Ship quantified AI-outcome proof (auto-handled %, ratings/ranking lift, response speed vs. human baseline).</li>
+      <li>Defuse switching/"muscle-memory" anxiety in migration messaging.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="who">Brand &amp; Content</div>
+    <h4>Professional, human, independent</h4>
+    <ul>
+      <li>Weaponize Airbnb's co-host snub: Guesty is built <em>for</em> professional management.</li>
+      <li>Adopt "augmentation, not replacement" + "purpose before polish" guardrails.</li>
+      <li>Use the premium-traveler data (84% pay more for quiet, 69% for verified sustainability) to back independents' edge.</li>
+      <li>Fill the thought-leadership vacuum — owned channel + partner successor podcasts.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="who">Growth &amp; Demand</div>
+    <h4>Margin, ancillary, on-ramp</h4>
+    <ul>
+      <li>Run the "OTA to acquire, direct to retain — own the rebook" campaign (margin, not share).</li>
+      <li>Launch the ancillary-revenue play: "$2–5K/month left on the table"; templated upsells + partner marketplace (Yhangry, PetScreening).</li>
+      <li>Make "set-and-forget" the villain; market RevManagement + marketing as one motion.</li>
+      <li>Meet first-time buyers in coaching communities; "get a PMS is step one."</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="who">Market Intelligence</div>
+    <h4>Make this a standing capability</h4>
+    <ul>
+      <li>Run this podcast sweep monthly; track competitor AI roadmaps (ProHost, Lodgify, Cloudbeds, Duetto, BookingsCloud) and RFP windows.</li>
+      <li>Turn Guesty's first-party demand data into a trusted forecast (operators openly distrust legacy sources).</li>
+      <li>Maintain regulation/tax trackers for key EU + US markets; surface as host-facing content.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="who">Cross-functional</div>
+    <h4>The one bet to align on</h4>
+    <ul>
+      <li>Form a clear, public POV on "who owns the AI agent" — interoperate with guest-side AI <em>and</em> defend the operator relationship.</li>
+      <li>This single question underlies GEO, the ProHost threat, ancillary revenue, and direct booking alike.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p><b>Channels analyzed:</b> Skift Travel · Vacation Rental Success · Get Paid For Your Pad · Boostly · Sarah and T · Good Morning Hospitality · The Short Term Show · STR Data Lab (AirDNA) · Alex &amp; Annie · No Vacancy Live · RevLabs (PriceLabs) · Vacation Rental Revolution · Short Term Rental Secrets · The STR Sisterhood · The Proptech Podcast · Thanks for Visiting · STR Global Unlocked · Behind the Stays.</p>
+</footer>
+
+</div>
+</body>
+</html>
